@@ -1,11 +1,13 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 
 export default function Header() {
   return (
     <div>
       <div>
-          <div>Memory Game</div>
-          <div>New Game</div>
+      <NavLink  exact activeClassName="active" to="/" >
+      Memory Game
+      </NavLink>
       </div>
     </div>
   );

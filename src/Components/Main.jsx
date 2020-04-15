@@ -10,7 +10,8 @@ export default function Main() {
 
     const [pairs, setPairs] = useState()
     const [players, setPlayers] = useState([])
-    
+    const [timer, setTimer] = useState()
+
     return (
         <div>
             <Route exact path="/">
@@ -21,16 +22,8 @@ export default function Main() {
                 <Game />
             </Route>
 
-            <Route exact path="/pairs">
+            <Route exact path="/game-options">
                 <Pairs />
-            </Route>
-
-            <Route exact path="/game">
-                <Game />
-            </Route>
-
-            <Route exact path="/players">
-                <Players />
             </Route>
         </div>
     );
