@@ -8,8 +8,12 @@ import GameOptions from './GameOptions'
 export default function Main() {
 
     const [pairs, setPairs] = useState(3)
+    console.log(pairs)
+    const [numOfPlayers, setNumOfPlayers] = useState()
     const [players, setPlayers] = useState([])
+    console.log(players)
     const [timer, setTimer] = useState()
+    console.log(timer)
 
     return (
         <div>
@@ -22,7 +26,7 @@ export default function Main() {
             </Route>
 
             <Route exact path="/game-options">
-                <GameOptions setPairs={setPairs} />
+                <GameOptions setPairs={setPairs} setPlayers={setPlayers} setTimer={setTimer} setNumOfPlayers={setNumOfPlayers}/>
             </Route>
         </div>
     );

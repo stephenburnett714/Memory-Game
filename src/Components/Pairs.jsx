@@ -2,15 +2,19 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 
 export default function Pairs(props) {
+function handleSubmit() { 
+  
+}
+
   return (
     <div>
-            <Form>
+            <Form onSubmit={handleSubmit}>
       <Form.Group controlId="exampleForm.ControlSelect1">
     <Form.Label>Number of Pairs</Form.Label>
     <Form.Control as="select">
-      <option onSelect={props.setPairs(1)}>1</option>
-      <option onSelect={props.setPairs(2)}>2</option>
-      <option onSelect={props.setPairs(3)}>3</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
       <option>4</option>
       <option>5</option>
       <option>6</option>
