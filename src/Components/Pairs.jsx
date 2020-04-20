@@ -1,9 +1,36 @@
 import React from 'react';
+import { Form } from 'react-bootstrap';
 
-export default function Pairs() {
+export default function Pairs(props) {
   return (
     <div>
-      
+            <Form>
+      <Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Number of Pairs</Form.Label>
+    <Form.Control as="select">
+      <option onSelect={props.setPairs(1)}>1</option>
+      <option onSelect={props.setPairs(2)}>2</option>
+      <option onSelect={props.setPairs(3)}>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+      <option>19</option>
+      <option>20</option>
+    </Form.Control>
+  </Form.Group>
+      </Form>
     </div>
   );
 }

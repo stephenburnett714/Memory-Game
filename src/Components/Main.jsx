@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { Route } from 'react-router-dom'
 import Home from './Home'
 import Game from './Game'
-import Pairs from './Pairs'
-import Players from './Players'
+import GameOptions from './GameOptions'
 
 
 export default function Main() {
 
-    const [pairs, setPairs] = useState()
+    const [pairs, setPairs] = useState(3)
     const [players, setPlayers] = useState([])
     const [timer, setTimer] = useState()
 
@@ -19,11 +18,11 @@ export default function Main() {
             </Route>
 
             <Route exact path="/game">
-                <Game />
+                <Game pairs={pairs}/>
             </Route>
 
             <Route exact path="/game-options">
-                <Pairs />
+                <GameOptions setPairs={setPairs} />
             </Route>
         </div>
     );
