@@ -8,12 +8,10 @@ import GameOptions from './GameOptions'
 export default function Main() {
 
     const [pairs, setPairs] = useState(3)
-    console.log(pairs)
     const [numOfPlayers, setNumOfPlayers] = useState()
     const [players, setPlayers] = useState([])
-    console.log(players)
     const [timer, setTimer] = useState()
-    console.log(timer)
+    const [turns, setTurns] = useState(1)
 
     return (
         <div>
