@@ -8,9 +8,9 @@ import GameOptions from './GameOptions'
 export default function Main() {
 
     const [pairs, setPairs] = useState(1)
+    const [cardBack, setCardBack] =useState()
     const [numOfPlayers, setNumOfPlayers] = useState()
     const [players, setPlayers] = useState([])
-    console.log(pairs)
     const [timer, setTimer] = useState()
     const [turns, setTurns] = useState(1)
 
@@ -21,11 +21,11 @@ export default function Main() {
             </Route>
 
             <Route exact path="/game">
-                <Game pairs={pairs}/>
+                <Game pairs={pairs} cardBack={cardBack}/>
             </Route>
 
             <Route exact path="/game-options">
-                <GameOptions players={players} pairs={pairs} setPairs={setPairs} setPlayers={setPlayers} setTimer={setTimer} setNumOfPlayers={setNumOfPlayers}/>
+                <GameOptions  pairs={pairs} setPairs={setPairs} cardBack={cardBack} setCardBack={setCardBack}/>
             </Route>
         </div>
     );

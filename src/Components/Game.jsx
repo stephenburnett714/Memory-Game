@@ -5,28 +5,26 @@ import CardBack3 from '../Images/CardBacks/CardBack3.jpg'
 
 export default function Game(props) {
 
-
-// Card Backs 
   let cardBackArray = [];
 
   cardBackArray.push(CardBack1) 
   cardBackArray.push(CardBack2)
   cardBackArray.push(CardBack3)
+console.log(props.cardBack)
+
 
 // Card Fronts
 let cardFrontArray = []
 
+cardFrontArray.push()
 
-
-
-let numberOfCards = (props.pairs * 2)
-
+let cardBack = cardBackArray[props.cardBack]
 
 
   return (
     <div>
       {props.pairs}
-      <img src={cardBackArray[2]}></img>
+      <img src={cardBack}></img>
     </div>
   );
 }
