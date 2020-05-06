@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 
 export default function Game(props) {
 
@@ -16,6 +17,12 @@ export default function Game(props) {
   <option  value="3">3</option>
   <option value="4">4</option>
 </select>
+<br/>
+<button>
+<Link  exact activeClassName="active" to="/game" pairs={props.pairs}>
+  Start Game
+  </Link>
+  </button>
     </div>
   );
 }

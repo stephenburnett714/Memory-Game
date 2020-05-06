@@ -10,7 +10,7 @@ export default function Main() {
     const [pairs, setPairs] = useState(1)
     const [numOfPlayers, setNumOfPlayers] = useState()
     const [players, setPlayers] = useState([])
-    console.log(players)
+    console.log(pairs)
     const [timer, setTimer] = useState()
     const [turns, setTurns] = useState(1)
 
