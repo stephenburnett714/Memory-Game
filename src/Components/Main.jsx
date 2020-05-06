@@ -10,6 +10,7 @@ export default function Main() {
     const [pairs, setPairs] = useState(3)
     const [numOfPlayers, setNumOfPlayers] = useState()
     const [players, setPlayers] = useState([])
+    console.log(players)
     const [timer, setTimer] = useState()
     const [turns, setTurns] = useState(1)
 
