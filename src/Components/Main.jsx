@@ -7,7 +7,7 @@ import GameOptions from './GameOptions'
 
 export default function Main() {
 
-    const [pairs, setPairs] = useState(3)
+    const [pairs, setPairs] = useState(1)
     const [numOfPlayers, setNumOfPlayers] = useState()
     const [players, setPlayers] = useState([])
     console.log(players)
@@ -25,7 +25,7 @@ export default function Main() {
             </Route>
 
             <Route exact path="/game-options">
-                <GameOptions setPairs={setPairs} setPlayers={setPlayers} setTimer={setTimer} setNumOfPlayers={setNumOfPlayers}/>
+                <GameOptions players={players} pairs={pairs} setPairs={setPairs} setPlayers={setPlayers} setTimer={setTimer} setNumOfPlayers={setNumOfPlayers}/>
             </Route>
         </div>
     );
