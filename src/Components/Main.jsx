@@ -8,11 +8,8 @@ import GameOptions from './GameOptions'
 export default function Main() {
 
     const [pairs, setPairs] = useState(1)
-    const [cardBack, setCardBack] =useState()
-    const [numOfPlayers, setNumOfPlayers] = useState()
-    const [players, setPlayers] = useState([])
-    const [timer, setTimer] = useState()
-    const [turns, setTurns] = useState(1)
+    const [cardBack, setCardBack] =useState(0)
+    const [shuffledCards, setShuffledCards] = useState()
 
     return (
         <div>
@@ -21,11 +18,12 @@ export default function Main() {
             </Route>
 
             <Route exact path="/game">
-                <Game pairs={pairs} cardBack={cardBack}/>
+                <Game 
+                />
             </Route>
 
             <Route exact path="/game-options">
-                <GameOptions  pairs={pairs} setPairs={setPairs} cardBack={cardBack} setCardBack={setCardBack}/>
+                <GameOptions  shuffledCards={shuffledCards} setShuffledCards={setShuffledCards} pairs={pairs} setPairs={setPairs} cardBack={cardBack} setCardBack={setCardBack}/>
             </Route>
         </div>
     );
