@@ -55,6 +55,7 @@ function cardStorage() {
   createCards()
   let newCards = (shuffleArray(cardsUsedInGame))
   localStorage.setItem('shuffledCardsArray', JSON.stringify(newCards));
+  localStorage.setItem('cardBack', JSON.stringify(props.cardBack));
 }
   return (
     <div>
